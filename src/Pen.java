@@ -1,20 +1,13 @@
 //task 1
-public class Pen {
-   private String title;
-   private String colour;
-   private double price;
-
-    boolean equals (Pen pen){
-        if((this.title).equals(pen.title) && (this.colour).equals(pen.colour) && (this.price == pen.price)) return true;
-            return false;
+public class Pen extends WritingSupplies {
+    public Pen() {
+        this.colour="blue";
+        this.title="ballpen";
+        this.price=20.50;
     }
-
-
-    public int hashCode(){
-        return (int) (100*price + colour.hashCode()+title.hashCode());
-    }
-
-   public String toString(){
-     return title +" "+colour +" "+price;
+    public Pen(String colour, String title, double price) {
+        this.colour=colour;
+        this.title=title;
+        this.price=price;
     }
 }

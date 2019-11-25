@@ -2,12 +2,24 @@ import java.util.ArrayList;
 
 public class Employee {
     private String name;
-    ArrayList<Object> stationary = new ArrayList<>();
+  private  ArrayList<Stationery> stationeryArrList = new ArrayList<Stationery>();
 
-    double totalPrice(){
+   public void giveStationery(Stationery st){
+       stationeryArrList.add(st);
+   }
+
+
+    double showStationeryPrice(){
         double totPr=0.0;
-        for(Object o: stationary){
-            totPr+=o.price;
+        for(Stationery st: stationeryArrList){
+            totPr+=st.price;
+        }
+        return totPr;
+    }
+
+    void showAllStationery(){
+        for(Stationery st: stationeryArrList){
+            System.out.println(st.title);
         }
     }
 
