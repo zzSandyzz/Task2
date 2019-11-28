@@ -1,10 +1,10 @@
 import java.util.HashMap;
 
-public class Discipline {
+public class Discipline <T> {
     public enum Subjects { MATH, GEOMETRY, ENGLISH, HISTORY;}
     Subjects s;
     String name;
-    HashMap<Student, Double> studentsMarks= new HashMap<>();
+    HashMap<Student, T> studentsMarks= new HashMap<>();
 
     public Discipline (Subjects s, String name){
         this.s = s;
@@ -23,7 +23,7 @@ public class Discipline {
         }
 
     }
-    void addMark(Student s, double mark){
+    void addMark(Student s, T mark){
         studentsMarks.put(s, mark);
     }
 

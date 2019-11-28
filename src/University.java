@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class University {
-    public Discipline math = new Discipline(Discipline.Subjects.MATH, "Math");
-    public Discipline geometry = new Discipline(Discipline.Subjects.GEOMETRY, "Geometry");
-    public Discipline english = new Discipline(Discipline.Subjects.ENGLISH, "English");
-    public Discipline history = new Discipline(Discipline.Subjects.HISTORY, "History");
+    public Discipline math = new Discipline<Double>(Discipline.Subjects.MATH, "Math");
+    public Discipline geometry = new Discipline<Double>(Discipline.Subjects.GEOMETRY, "Geometry");
+    public Discipline english = new Discipline<Integer>(Discipline.Subjects.ENGLISH, "English");
+    public Discipline history = new Discipline<Integer>(Discipline.Subjects.HISTORY, "History");
     ArrayList<Student> students= new ArrayList<>();
     ArrayList<Discipline> disciplines =new ArrayList<>();
 

@@ -52,6 +52,7 @@ public class Task2 {
 
       University uni = new University();
         Student pasha = new Student("PASHA");
+        Student katya = new Student("KATYA");
 
         uni.students.add(pasha);
         uni.english.addStudentToDiscipline(pasha);
@@ -70,10 +71,19 @@ public class Task2 {
 
        // pasha.addMark(Discipline.ENGLISH, 5.0);
        // pasha.addMark(Discipline.GEOMETRY, 3.0);
-        uni.english.addMark(pasha,5);
+        uni.english.addMark(pasha,5.0);
         uni.history.addMark(pasha,4);
+        //uni.geometry.addMark(pasha, "Excellent!");
         System.out.println("pasha's disciplines and marks");
         uni.showDisciplinesAndMarksForStudent(pasha);
+
+        uni.geometry.addMark(katya, Double.POSITIVE_INFINITY);
+
+        System.out.println("katya's disciplines and marks");
+        uni.showDisciplinesAndMarksForStudent(katya);
+
+        System.out.println("geometry students: ");
+        uni.geometry.showStudentsInGroup(uni, uni.geometry);
 
          //AtomicSub submarine = new AtomicSub();
           //submarine.swim();
