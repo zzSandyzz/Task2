@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.TreeSet;
 
 public class Task2 {
@@ -45,8 +46,35 @@ public class Task2 {
             System.out.println(st.toString());
         }
 
+       // Discipline d = Discipline.ENGLISH;
+      //  HashMap<Discipline, String> teachers = new HashMap<>();
+      //  teachers.put(Discipline.HISTORY, "овца");
+
+      University uni = new University();
+        Student pasha = new Student("PASHA");
+
+        uni.students.add(pasha);
+
+        pasha.addStudentToDiscipline(Discipline.ENGLISH);
+
+        System.out.println("English students:");
+        Discipline.ENGLISH.showStudentsInGroup(uni, Discipline.ENGLISH);
+
+        System.out.println("math students:");
+        Discipline.ENGLISH.showStudentsInGroup(uni, Discipline.MATH);
+
+        System.out.println("pasha's disciplines and marks");
+        pasha.showDisciplinesForStudent();
+
+        pasha.addMark(Discipline.ENGLISH, 5.0);
+        pasha.addMark(Discipline.GEOMETRY, 3.0);
+
+        System.out.println("pasha's disciplines and marks");
+        pasha.showDisciplinesForStudent();
 
 
+         //AtomicSub submarine = new AtomicSub();
+          //submarine.swim();
 
     }
 }
