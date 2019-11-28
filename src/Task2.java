@@ -54,24 +54,26 @@ public class Task2 {
         Student pasha = new Student("PASHA");
 
         uni.students.add(pasha);
-
-        pasha.addStudentToDiscipline(Discipline.ENGLISH);
+        uni.english.addStudentToDiscipline(pasha);
+       // pasha.addStudentToDiscipline(Discipline.ENGLISH);
 
         System.out.println("English students:");
-        Discipline.ENGLISH.showStudentsInGroup(uni, Discipline.ENGLISH);
+        uni.english.showStudentsInGroup(uni, uni.english);
 
         System.out.println("math students:");
-        Discipline.ENGLISH.showStudentsInGroup(uni, Discipline.MATH);
+        uni.math.showStudentsInGroup(uni, uni.math);
 
         System.out.println("pasha's disciplines and marks");
-        pasha.showDisciplinesForStudent();
 
-        pasha.addMark(Discipline.ENGLISH, 5.0);
-        pasha.addMark(Discipline.GEOMETRY, 3.0);
+        uni.showDisciplinesAndMarksForStudent(pasha);
+       // pasha.showDisciplinesForStudent();
 
+       // pasha.addMark(Discipline.ENGLISH, 5.0);
+       // pasha.addMark(Discipline.GEOMETRY, 3.0);
+        uni.english.addMark(pasha,5);
+        uni.history.addMark(pasha,4);
         System.out.println("pasha's disciplines and marks");
-        pasha.showDisciplinesForStudent();
-
+        uni.showDisciplinesAndMarksForStudent(pasha);
 
          //AtomicSub submarine = new AtomicSub();
           //submarine.swim();
