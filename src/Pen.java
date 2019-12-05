@@ -3,7 +3,7 @@ public class Pen extends WritingSupplies {
     public Pen() {
         this.colour = "blue";
         this.title = "ballpen";
-        this.price = 20.50;
+        this.price = 20.5;
     }
 
     public Pen(String colour, String title, double price) {
