@@ -5,21 +5,22 @@ public class University {
     public Discipline geometry = new Discipline<Double>(Discipline.Subjects.GEOMETRY, "Geometry");
     public Discipline english = new Discipline<Integer>(Discipline.Subjects.ENGLISH, "English");
     public Discipline history = new Discipline<Integer>(Discipline.Subjects.HISTORY, "History");
-    ArrayList<Student> students= new ArrayList<>();
-    ArrayList<Discipline> disciplines =new ArrayList<>();
+    ArrayList<Student> students = new ArrayList<>();
+    ArrayList<Discipline> disciplines = new ArrayList<>();
 
 
-    public  University(){
+    public University() {
         disciplines.add(math);
         disciplines.add(geometry);
         disciplines.add(english);
         disciplines.add(history);
     }
 
-    void showDisciplinesAndMarksForStudent( Student student){
+    void showDisciplinesAndMarksForStudent(Student student) {
 
         for (Discipline discipline : disciplines) {
-            if(discipline.studentsMarks.containsKey(student)) System.out.println( discipline +" "+ discipline.studentsMarks.get(student));
+            if (discipline.studentsMarks.containsKey(student))
+                System.out.println(discipline + " " + discipline.studentsMarks.get(student));
         }
 
     }

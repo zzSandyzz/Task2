@@ -1,15 +1,16 @@
+@ThisIsTask7
 public class AtomicSub {
-    AtomicEngine engine =new AtomicEngine();
+    AtomicEngine engine = new AtomicEngine();
 
-    void swim(){
+    void swim() {
         System.out.println("submarine floating");
         engine.startEngine();
     }
 
-    class AtomicEngine{
+    class AtomicEngine {
 
 
-        void startEngine(){
+        void startEngine() {
             System.out.println("engine started");
         }
     }

@@ -1,4 +1,4 @@
 public abstract class Stationery {
-     String title;
-     double price;
+    String title;
+    double price;
 }
